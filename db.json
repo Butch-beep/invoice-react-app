@@ -1,0 +1,440 @@
+{
+    "users": [
+        {
+            "id": "UID1",
+            "first_name": "Butch Melvin",
+            "last_name": "Cortez",
+            "email": "butchcortez.bmc@gmail.com",
+            "password": "cortez.03!!!",
+            "isDarkMode": false,
+            "invoices": [
+                {
+                    "invoiceID": "APRL042301",
+                    "projectDescription": "Website Design",
+                    "payeeAddress": [
+                        {
+                            "street": "8485 Wiegand View",
+                            "city": "Rippinburgh",
+                            "postCode": "68719-2548",
+                            "state": "Massachusetts",
+                            "country": "United States"
+                        }
+                    ],
+                    "payorInfo": [
+                        {
+                            "name": "Violet Garrison",
+                            "email": "violet.garrison@gmail.com"
+                        }
+                    ], 
+                    "payorAddress": [
+                        {
+                            "street": "044 Bessie Glen",
+                            "city": "Osinskiton",
+                            "postCode": "53366",
+                            "state": "California",
+                            "country": "United States"
+                        }
+                    ],
+                    "datePosted": "February 1, 2023 11:13:00",
+                    "paymentDate": "February 11, 2022",
+                    "status": "Pending",
+                    "item": [
+                        {
+                            "name": "",
+                            "quantity": "",
+                            "unitPrice": ""
+                        }
+                    ]
+                },
+                {
+                    "invoiceID": "APRL042301",
+                    "projectDescription": "Project Consult",
+                    "payeeAddress": [
+                        {
+                            "street": "8485 Wiegand View",
+                            "city": "Rippinburgh",
+                            "postCode": "68719-2548",
+                            "state": "Massachusetts",
+                            "country": "United States"
+                        }
+                    ],
+                    "payorInfo": [
+                        {
+                            "name": "Habiba Sampson",
+                            "email": "habiba.sampson@gmail.com"
+                        }
+                    ], 
+                    "payorAddress": [
+                        {
+                            "street": "843 Thea Summit",
+                            "city": "South Heloise",
+                            "postCode": "55279-1897",
+                            "state": "Montana",
+                            "country": "United States"
+                        }
+                    ],
+                    "datePosted": "August 3, 2022 3:23:23",
+                    "paymentDate": "August 5, 2022",
+                    "status": "Paid",
+                    "item": [
+                        {
+                            "name": "",
+                            "quantity": "",
+                            "unitPrice": ""
+                        }
+                    ]
+                },
+                {
+                    "invoiceID": "APRL042301",
+                    "projectDescription": "Process Excellence",
+                    "payeeAddress": [
+                        {
+                            "street": "8485 Wiegand View",
+                            "city": "Rippinburgh",
+                            "postCode": "68719-2548",
+                            "state": "Massachusetts",
+                            "country": "United States"
+                        }
+                    ],
+                    "payorInfo": [
+                        {
+                            "name": "Kaden Ellis",
+                            "email": "kaden.ellis@gmail.com"
+                        }
+                    ], 
+                    "payorAddress": [
+                        {
+                            "street": "57191 COnsidine Square",
+                            "city": "Zulaufmouth",
+                            "postCode": "37188-0404",
+                            "state": "Maryland",
+                            "country": "United States"
+                        }
+                    ],
+                    "datePosted": "December 3, 2022 7:53:34",
+                    "paymentDate": "December 10, 2022",
+                    "status": "Paid",
+                    "item": [
+                        {
+                            "name": "",
+                            "quantity": "",
+                            "unitPrice": ""
+                        }
+                    ]
+                },
+                {
+                    "invoiceID": "APRL042301",
+                    "projectDescription": "Managed Services",
+                    "payeeAddress": [
+                        {
+                            "street": "8485 Wiegand View",
+                            "city": "Rippinburgh",
+                            "postCode": "68719-2548",
+                            "state": "Massachusetts",
+                            "country": "United States"
+                        }
+                    ],
+                    "payorInfo": [
+                        {
+                            "name": "Jasper Booker",
+                            "email": "jasper.booker@gmail.com"
+                        }
+                    ], 
+                    "payorAddress": [
+                        {
+                            "street": "477 Von Mews",
+                            "city": "East Henryport",
+                            "postCode": "23074-2359",
+                            "state": "Rhode Island",
+                            "country": "United States"
+                        }
+                    ],
+                    "datePosted": "October 10, 2022 8:53:32",
+                    "paymentDate": "October 20, 2022",
+                    "status": "Draft",
+                    "item": [
+                        {
+                            "name": "",
+                            "quantity": "",
+                            "unitPrice": ""
+                        }
+                    ]
+                },
+                {
+                    "invoiceID": "APRL042301",
+                    "projectDescription": "Data Analytics",
+                    "payeeAddress": [
+                        {
+                            "street": "8485 Wiegand View",
+                            "city": "Rippinburgh",
+                            "postCode": "68719-2548",
+                            "state": "Massachusetts",
+                            "country": "United States"
+                        }
+                    ],
+                    "payorInfo": [
+                        {
+                            "name": "Asia Marsh",
+                            "email": "asia.marsh@gmail.com"
+                        }
+                    ], 
+                    "payorAddress": [
+                        {
+                            "street": "016 Hickle Gateway",
+                            "city": "East Olamouth",
+                            "postCode": "30342",
+                            "state": "West Virginia",
+                            "country": "United States"
+                        }
+                    ],
+                    "datePosted": "November 31, 2022 15:23:43",
+                    "paymentDate": "December 3, 2022",
+                    "status": "Pending",
+                    "item": [
+                        {
+                            "name": "",
+                            "quantity": "",
+                            "unitPrice": ""
+                        }
+                    ]
+                },
+                {
+                    "invoiceID": "APRL042301",
+                    "projectDescription": "Robotics Process Automation",
+                    "payeeAddress": [
+                        {
+                            "street": "8485 Wiegand View",
+                            "city": "Rippinburgh",
+                            "postCode": "68719-2548",
+                            "state": "Massachusetts",
+                            "country": "United States"
+                        }
+                    ],
+                    "payorInfo": [
+                        {
+                            "name": "Alana Spencer",
+                            "email": "alana.spencer@gmail.com"
+                        }
+                    ], 
+                    "payorAddress": [
+                        {
+                            "street": "90058 Enoch Route",
+                            "city": "West Anabelleport",
+                            "postCode": "94300-9091",
+                            "state": "Hawaii",
+                            "country": "United States"
+                        }
+                    ],
+                    "datePosted": "December 3, 2022 7:53:50",
+                    "paymentDate": "December 5, 2022",
+                    "status": "Paid",
+                    "item": [
+                        {
+                            "name": "",
+                            "quantity": "",
+                            "unitPrice": ""
+                        }
+                    ]
+                },
+                {
+                    "invoiceID": "APRL042301",
+                    "projectDescription": "Accounting Software",
+                    "payeeAddress": [
+                        {
+                            "street": "8485 Wiegand View",
+                            "city": "Rippinburgh",
+                            "postCode": "68719-2548",
+                            "state": "Massachusetts",
+                            "country": "United States"
+                        }
+                    ],
+                    "payorInfo": [
+                        {
+                            "name": "Ryan Cordova",
+                            "email": "ryan.cordova@gmail.com"
+                        }
+                    ], 
+                    "payorAddress": [
+                        {
+                            "street": "37501 Muhammad Key",
+                            "city": "New Anissa",
+                            "postCode": "30579",
+                            "state": "North Carolina",
+                            "country": "United States"
+                        }
+                    ],
+                    "datePosted": "December 3, 2022 7:53:34",
+                    "paymentDate": "December 4, 2022",
+                    "status": "Paid",
+                    "item": [
+                        {
+                            "name": "",
+                            "quantity": "",
+                            "unitPrice": ""
+                        }
+                    ]
+                },
+                {
+                    "invoiceID": "APRL042301",
+                    "projectDescription": "Process Excellence",
+                    "payeeAddress": [
+                        {
+                            "street": "8485 Wiegand View",
+                            "city": "Rippinburgh",
+                            "postCode": "68719-2548",
+                            "state": "Massachusetts",
+                            "country": "United States"
+                        }
+                    ],
+                    "payorInfo": [
+                        {
+                            "name": "Shane Barrera",
+                            "email": "shane.barrera@gmail.com"
+                        }
+                    ], 
+                    "payorAddress": [
+                        {
+                            "street": "2216 Schultz Estate",
+                            "city": "North Amo",
+                            "postCode": "51845-5126",
+                            "state": "Sourth Carolina",
+                            "country": "United States"
+                        }
+                    ],
+                    "datePosted": "January 23, 2023 14:23:12",
+                    "paymentDate": "January 25, 2023",
+                    "status": "Draft",
+                    "item": [
+                        {
+                            "name": "",
+                            "quantity": "",
+                            "unitPrice": ""
+                        }
+                    ]
+                },
+                {
+                    "invoiceID": "APRL042301",
+                    "projectDescription": "Website Design",
+                    "payeeAddress": [
+                        {
+                            "street": "8485 Wiegand View",
+                            "city": "Rippinburgh",
+                            "postCode": "68719-2548",
+                            "state": "Massachusetts",
+                            "country": "United States"
+                        }
+                    ],
+                    "payorInfo": [
+                        {
+                            "name": "Luc Lindsay",
+                            "email": "luc.lindsay@gmail.com"
+                        }
+                    ], 
+                    "payorAddress": [
+                        {
+                            "street": "3432 RUtherford Prairie",
+                            "city": "South Fletaport",
+                            "postCode": "01411",
+                            "state": "North Dakota",
+                            "country": "United States"
+                        }
+                    ],
+                    "datePosted": "January 29, 2023 13:23:51",
+                    "paymentDate": "February 11, 2023",
+                    "status": "Pending",
+                    "item": [
+                        {
+                            "name": "",
+                            "quantity": "",
+                            "unitPrice": ""
+                        }
+                    ]
+                },
+                {
+                    "invoiceID": "APRL042301",
+                    "projectDescription": "Robotics Process Automation",
+                    "payeeAddress": [
+                        {
+                            "street": "8485 Wiegand View",
+                            "city": "Rippinburgh",
+                            "postCode": "68719-2548",
+                            "state": "Massachusetts",
+                            "country": "United States"
+                        }
+                    ],
+                    "payorInfo": [
+                        {
+                            "name": "Ellen Bray",
+                            "email": "ellen.bray@gmail.com"
+                        }
+                    ], 
+                    "payorAddress": [
+                        {
+                            "street": "152 Lueschke Walk",
+                            "city": "Gudrunshire",
+                            "postCode": "85846",
+                            "state": "Kansas",
+                            "country": "United States"
+                        }
+                    ],
+                    "datePosted": "April 8, 2022 18:23:43",
+                    "paymentDate": "April 10, 2022",
+                    "status": "Paid",
+                    "item": [
+                        {
+                            "name": "",
+                            "quantity": "",
+                            "unitPrice": ""
+                        }
+                    ]
+                },
+                {
+                    "invoiceID": "APRL042301",
+                    "projectDescription": "Robotics Process Automation",
+                    "payeeAddress": [
+                        {
+                            "street": "8485 Wiegand View",
+                            "city": "Rippinburgh",
+                            "postCode": "68719-2548",
+                            "state": "Massachusetts",
+                            "country": "United States"
+                        }
+                    ],
+                    "payorInfo": [
+                        {
+                            "name": "Heather Berger",
+                            "email": "heather.berger@gmail.com"
+                        }
+                    ], 
+                    "payorAddress": [
+                        {
+                            "street": "3199 Kuhlman Branch",
+                            "city": "New Lenoramouth",
+                            "postCode": "55953",
+                            "state": "South Carolina",
+                            "country": "United States"
+                        }
+                    ],
+                    "datePosted": "June 3, 2022 13:25:21",
+                    "paymentDate": "June 20, 2022",
+                    "status": "Paid",
+                    "item": [
+                        {
+                            "name": "",
+                            "quantity": "",
+                            "unitPrice": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "UID2",
+            "first_name": "Glenn",
+            "last_name": "Watson",
+            "email": "glenn.watson@gmail.com",
+            "password": "glennwatson123",
+            "isDarkMode": true
+        }
+    ]
+}
