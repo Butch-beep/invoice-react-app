@@ -40,9 +40,10 @@
                     "status": "Pending",
                     "item": [
                         {
-                            "name": "",
+                            "name": "Design",
                             "quantity": "",
-                            "unitPrice": ""
+                            "type": "service",
+                            "unitPrice": "1,320"
                         }
                     ]
                 },
@@ -78,9 +79,10 @@
                     "status": "Paid",
                     "item": [
                         {
-                            "name": "",
+                            "name": "Design Consulting",
                             "quantity": "",
-                            "unitPrice": ""
+                            "type": "service",
+                            "unitPrice": "10,421"
                         }
                     ]
                 },
@@ -116,9 +118,10 @@
                     "status": "Paid",
                     "item": [
                         {
-                            "name": "",
+                            "name": "Policy",
                             "quantity": "",
-                            "unitPrice": ""
+                            "type": "service",
+                            "unitPrice": "7,235"
                         }
                     ]
                 },
@@ -154,9 +157,9 @@
                     "status": "Draft",
                     "item": [
                         {
-                            "name": "",
+                            "name": "Maintenance",
                             "quantity": "",
-                            "unitPrice": ""
+                            "unitPrice": "200"
                         }
                     ]
                 },
@@ -192,9 +195,10 @@
                     "status": "Pending",
                     "item": [
                         {
-                            "name": "",
+                            "name": "Consulting",
                             "quantity": "",
-                            "unitPrice": ""
+                            "type": "service",
+                            "unitPrice": "6,230"
                         }
                     ]
                 },
@@ -230,9 +234,10 @@
                     "status": "Paid",
                     "item": [
                         {
-                            "name": "",
+                            "name": "Technology Transformation",
                             "quantity": "",
-                            "unitPrice": ""
+                            "type": "service",
+                            "unitPrice": "21,203"
                         }
                     ]
                 },
@@ -268,9 +273,10 @@
                     "status": "Paid",
                     "item": [
                         {
-                            "name": "",
+                            "name": "Accounts Payable Module",
                             "quantity": "",
-                            "unitPrice": ""
+                            "type": "service",
+                            "unitPrice": "4,521"
                         }
                     ]
                 },
@@ -306,9 +312,10 @@
                     "status": "Draft",
                     "item": [
                         {
-                            "name": "",
+                            "name": "Digitalization",
                             "quantity": "",
-                            "unitPrice": ""
+                            "type": "service",
+                            "unitPrice": "9,430"
                         }
                     ]
                 },
@@ -344,9 +351,10 @@
                     "status": "Pending",
                     "item": [
                         {
-                            "name": "",
+                            "name": "Full-Stack Design",
                             "quantity": "",
-                            "unitPrice": ""
+                            "type": "service",
+                            "unitPrice": "20,000"
                         }
                     ]
                 },
@@ -382,9 +390,10 @@
                     "status": "Paid",
                     "item": [
                         {
-                            "name": "",
+                            "name": "Technology Transformation",
                             "quantity": "",
-                            "unitPrice": ""
+                            "type": "service",
+                            "unitPrice": "4,430"
                         }
                     ]
                 },
@@ -420,9 +429,10 @@
                     "status": "Paid",
                     "item": [
                         {
-                            "name": "",
+                            "name": "Technology Transformation",
                             "quantity": "",
-                            "unitPrice": ""
+                            "type": "service",
+                            "unitPrice": "10,999"
                         }
                     ]
                 }
