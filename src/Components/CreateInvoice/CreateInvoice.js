@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Button from '../Button/Button'
 import InputArea from '../InputArea/InputArea'
+import styles from './CreateInvoice.module.scss'
 
 function CreateInvoice() {
   
@@ -10,51 +11,56 @@ function CreateInvoice() {
     setValue(e.target.value)
   }
 
+  const fieldName = {
+    client: ["Client's Name", "Client's Email"],
+    address: ["Street Address",
+              ["City", "Post Code", "Country"]
+             ]
+  }
 
+  const AddressField = fieldName["address"][1].map((label) => {
+    return (
+      <InputArea
+        inputLabel={label}
+        value={value}
+        onChange={changeValue}>
+      </InputArea>    
+    )
+  })
 
+  const clientField = fieldName.client.map((label) => {
+    return (
+      <InputArea
+        inputLabel={label}
+        value={value}
+        onChange={changeValue}>
+      </InputArea> 
+    )
+  })
+
+  const streetAddress = (
+    <InputArea
+      inputLabel={"Street Address"}
+      value={value}
+      onChange={changeValue}>
+    </InputArea>
+  )
 
   return (
-    <div>
-        <p>New Invoice</p>
-        <p>Bill From</p>
-        <InputArea
-          inputLabel={"Street Address"}
-          value={value}
-          onChange={changeValue}>
-        </InputArea>
-        <div>
-          <InputArea
-            inputLabel={"City"}
-            value={value}
-            onChange={changeValue}>
-          </InputArea>
-          <InputArea
-            inputLabel={"Post Code"}
-            value={value}
-            onChange={changeValue}>
-          </InputArea>
-          <InputArea
-            inputLabel={"Country"}
-            value={value}
-            onChange={changeValue}>
-          </InputArea>
+    <div className='new-invoice'>
+        <p className={styles.red}>Hello</p>
+        <p className={styles.new-invoice__text}>New Invoice</p>
+        <p className='new-invoice__text--violet'>Bill From</p>
+        { streetAddress }
+        <div className='new-invoice__container--row'>
+          { AddressField }
         </div>
-        <p>Bill To</p>
-        <InputArea
-            inputLabel={"Country"}
-            value={value}
-            onChange={changeValue}>
-        </InputArea>
-        <InputArea
-          inputLabel={"Country"}
-          value={value}
-          onChange={changeValue}>
-        </InputArea>
-        <InputArea
-          inputLabel={"Country"}
-          value={value}
-          onChange={changeValue}>
-        </InputArea>
+        <p className='new-invoice__text--violet'>Bill To</p>
+        { clientField }
+        { streetAddress }
+        <div className='new-invoice__container--row'>
+          { AddressField }
+        </div>
     </div>
   )
 }
