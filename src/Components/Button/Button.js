@@ -1,13 +1,13 @@
 import React from 'react';
-import { StyledButton } from './Button.style';
+import './Button.module.css'
 
 function Button({ onClick, child, style }) {
   return (
-    <StyledButton 
+    <button 
         onClick={onClick}
         style={style}>
             {child}
-    </StyledButton>
+    </button>
   )
 }
 

@@ -1,9 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
-
-const StyledSelect = styled.select`
-
-`
 
 const option = [
   {value: 'Draft'},
@@ -13,9 +8,9 @@ const option = [
 
 function InvoiceFilter() {
   return (
-    <StyledSelect>
+    <div>
       {option.map((item) => <option value={item.value}>{item.value}</option>)}
-    </StyledSelect>
+    </div>
   )
 }
 
