@@ -1,0 +1,17 @@
+.new-invoice {
+    color: #7e88c3;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    &__text--violet {
+        color: #7c5dfa;
+    }
+
+    &__container--row {
+        column-gap: 2.4rem;
+        display: flex;
+    }
+}
+
+

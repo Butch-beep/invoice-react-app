@@ -1,0 +1,34 @@
+import React from 'react'
+
+function IssueDate() {
+    const maxDate = () => {
+        const today = new Date();
+        let dd = today.getDate();
+        let mm = today.getMonth() + 1;
+        let yyyy = today.getFullYear();
+
+        if (dd < 10) {
+            dd = '0' + dd;
+        }
+        
+        if (mm < 10 ) {
+            mm = '0' + mm;
+        }
+        
+        return `${yyyy}-${mm}-${dd}`
+        }
+
+  return (
+    <label>
+        Issue Date
+        <br />
+        <input 
+            type='date'
+            min='2000-01-01'
+            max={maxDate()}>
+            </input>
+    </label>
+  )
+}
+
+export default IssueDate
