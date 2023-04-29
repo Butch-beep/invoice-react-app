@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+
+    &__container--title {
+        margin-right: auto;
+    }
+
+    &__container--filter {
+        &-option {
+            display: flex;
+            flex-direction: column;
+            height: 100px;
+        }
+    }
+}

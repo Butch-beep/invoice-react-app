@@ -1,12 +1,15 @@
 import React from 'react'
-import MainLogo from '../../assets/header-logo.svg'
-import DarkModeLogo from '../../assets/icon-moon.svg'
-import Avatar from '../../assets/image-avatar.jpg'
-import Button from '../Button/Button'
+import mainLogo from '../../assets/header-logo.svg'
+import darkMode from '../../assets/icon-moon.svg'
+import './NavBar.scss'
 
 function NavBar() {
   return (
-    <div>
+    <div className='nav-bar'>
+        <img className='nav-bar__main-logo' src={mainLogo} />
+        <button className='nav-bar__dark-mode' type='button'/>
+        <div className='nav-bar__vertical-break' />
+        <button className='nav-bar__account-setting' type='button' />
     </div>
   )
 }

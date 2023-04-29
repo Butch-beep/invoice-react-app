@@ -1,14 +1,21 @@
 import React from 'react';
-import Button from './Components/Button/Button'
-import CreateInvoice from './Components/CreateInvoice/CreateInvoice';
-import InvoiceFilter from './Components/InvoiceFilter/InvoiceFilter';
-import NavBar from './Components/NavBar/NavBar';
+import './App.scss'
+import NavBar from './components/NavBar/NavBar';
+import Header from './components/Header/Header'
+import InvoiceList from './components/InvoiceList/InvoiceList';
+import { QueryClientProvider, QueryClient } from 'react-query'
+
+const queryClient = new QueryClient()
 
 function App() {
   return (
-    <div className="App">
-      <CreateInvoice />
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div className="App">
+        <NavBar />
+        <Header />
+        <InvoiceList />
+      </div>
+    </QueryClientProvider>
   );
 }
 
