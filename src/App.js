@@ -1,19 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { QueryClientProvider, QueryClient } from 'react-query'
 import './App.scss'
 import NavBar from './components/NavBar/NavBar';
 import Header from './components/Header/Header'
 import InvoiceList from './components/InvoiceList/InvoiceList';
-import { QueryClientProvider, QueryClient } from 'react-query'
+
 
 const queryClient = new QueryClient()
 
 function App() {
+
+  const [filter, setFilter] = useState([]);
+
+  const handleFilter = (e) => {
+    if (e.target.checked) {
+      setFilter([...filter, `${e.target.value}`])
+    } else {
+      setFilter(filter.filter((stat) => stat !== e.target.value))
+    }
+  }
+
   return (
     <QueryClientProvider client={queryClient}>
       <div className="App">
         <NavBar />
-        <Header />
-        <InvoiceList />
+        <main className='App__container'>
+          <Header onClick={handleFilter}/>
+          <InvoiceList filter={filter}/>
+        </main>
       </div>
     </QueryClientProvider>
   );

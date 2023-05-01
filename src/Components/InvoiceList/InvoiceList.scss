@@ -1,4 +1,9 @@
 .invoice-list {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
 }

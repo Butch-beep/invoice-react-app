@@ -3,7 +3,7 @@ import arrowDown from '../../assets/icon-arrow-down.svg'
 import arrowUp from '../../assets/icon-arrow-down.svg'
 import './Header.scss'
 
-function Header() {
+function Header( {onClick} ) {
 
   const [dropDown, setDropDown] = useState(false);
 
@@ -27,15 +27,15 @@ function Header() {
             {dropDown ? 
               <>
                 <label>
-                  <input className='header__checkbox--draft' type='checkbox' />
+                  <input className='header__checkbox--draft' type='checkbox' value='draft' onClick={onClick} />
                   Draft
                 </label>
                 <label>
-                  <input className='header__checkbox--pending' type='checkbox' />
+                  <input className='header__checkbox--pending' type='checkbox' value='pending' onClick={onClick} />
                   Pending
                 </label>
                 <label>
-                  <input className='header__checkbox--paid' type='checkbox' />
+                  <input className='header__checkbox--paid' type='checkbox' value='paid' onClick={onClick} />
                   Paid
                 </label>
               </>
@@ -44,6 +44,7 @@ function Header() {
         </div>
         <button className='
         header__button--new-invoice'>New Invoice</button>
+
     </div>
   )
 }

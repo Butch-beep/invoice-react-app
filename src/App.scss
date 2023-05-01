@@ -7,3 +7,12 @@
 body {
     color: black;
 }
+
+.App {
+    display: flex;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+}
