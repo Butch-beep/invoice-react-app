@@ -4,6 +4,7 @@ import './App.scss'
 import NavBar from './components/NavBar/NavBar';
 import Header from './components/Header/Header'
 import InvoiceList from './components/InvoiceList/InvoiceList';
+import Invoice from './components/Invoice/Invoice'
 
 
 const queryClient = new QueryClient()
@@ -14,7 +15,7 @@ function App() {
 
   const handleFilter = (e) => {
     if (e.target.checked) {
-      setFilter([...filter, `${e.target.value}`])
+      setFilter([...filter, e.target.value])
     } else {
       setFilter(filter.filter((stat) => stat !== e.target.value))
     }
@@ -25,8 +26,9 @@ function App() {
       <div className="App">
         <NavBar />
         <main className='App__container'>
-          <Header onClick={handleFilter}/>
-          <InvoiceList filter={filter}/>
+          {/* <Header onClick={handleFilter}/>
+          <InvoiceList filter={filter}/> */}
+          <Invoice />
         </main>
       </div>
     </QueryClientProvider>

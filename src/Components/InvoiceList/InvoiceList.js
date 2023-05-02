@@ -15,44 +15,27 @@ function InvoiceList({ filter }) {
     return <h2>Loading...</h2>
   }
 
-  const isActiveFilter = () => filter.every((stat) => {
-    console.log(stat)
-    //  console.log(['draft', 'pending', 'paid'].includes(stat))
-  })
-
-  console.log(isActiveFilter())
-  // console.log(['draft', 'pending', 'paid'].includes([]))
+  const invoiceListHTML = (param) => 
+    <button key={param.id} className='invoice-list__container'>
+      <p>{param.id}</p>
+      <p>{param.paymentDue}</p>
+      <p>{param.clientName}</p>
+      <p>{param.total}</p>
+      <p>{param.status}</p>
+      <img src={arrowRight} />
+    </button> 
 
   return (
     <div className='invoice-list'>
-      {isActiveFilter 
-      ? data?.data.map((invoice) => {
-        return filter.includes(invoice.status) 
-          ? <button key={invoice.id} className='invoice-list__container'>
-              <p>{invoice.id}</p>
-              <p>{invoice.paymentDue}</p>
-              <p>{invoice.clientName}</p>
-              <p>{invoice.total}</p>
-              <p>{invoice.status}</p>
-              <img src={arrowRight} />
-            </button> 
-          : null
-      })
+      {filter.length === 0 ? 
+        data?.data.map((invoice) => {
+          return invoiceListHTML(invoice)
+          }) 
       : data?.data.map((invoice) => {
-          <button key={invoice.id} className='invoice-list__container'>
-            <p>{invoice.id}</p>
-            <p>{invoice.paymentDue}</p>
-            <p>{invoice.clientName}</p>
-            <p>{invoice.total}</p>
-            <p>{invoice.status}</p>
-            <img src={arrowRight} />
-          </button> 
-      })}
-      {/* <p className='invoice-list__id'>Invoice ID</p>
-      <p className='invoice-list__payment-due'>Payment Due</p>
-      <p className='invoice-list__bill-to'>Bill To Name</p>
-      <p className='invoice-list__amount-due'>Total Amount Due</p>
-      <p className='invoice-list__status'>Status</p> */}
+          return filter.includes(invoice.status) 
+            ? invoiceListHTML(invoice)
+            : null})
+      } 
     </div>
   )
 }

@@ -11,6 +11,18 @@ function Header( {onClick} ) {
     setDropDown(!dropDown);
   }
 
+  const handleInputDraft = (e) => {
+    console.log('draft')
+  }
+
+  const handleInputPending = () => {
+    console.log('pending')
+  }
+
+  const handleInputPaid = () => {
+    console.log('paid')
+  }
+
   return (
     <div className='header'>
         <div className='header__container--title'>
@@ -23,23 +35,19 @@ function Header( {onClick} ) {
             <img className='header__img--arrow-down' src={arrowDown} />
             <img className='header__img--arrow-up' src={arrowUp} />
           </button>
-          <div className='header__container--filter-option'>
-            {dropDown ? 
-              <>
+          <div className={`header__container--filter-option${dropDown ? '--visible' : '--invisible'}`}>
                 <label>
-                  <input className='header__checkbox--draft' type='checkbox' value='draft' onClick={onClick} />
+                  <input className='header__checkbox--draft' type='checkbox' value='draft' onClick={(e) => {onClick(e); handleInputDraft()}} />
                   Draft
                 </label>
                 <label>
-                  <input className='header__checkbox--pending' type='checkbox' value='pending' onClick={onClick} />
+                  <input className='header__checkbox--pending' type='checkbox' value='pending' onClick={(e) => {onClick(e); handleInputPending()}} />
                   Pending
                 </label>
                 <label>
-                  <input className='header__checkbox--paid' type='checkbox' value='paid' onClick={onClick} />
+                  <input className='header__checkbox--paid' type='checkbox' value='paid' onClick={(e) => {onClick(e); handleInputPaid()}} />
                   Paid
                 </label>
-              </>
-            : null}
           </div>
         </div>
         <button className='

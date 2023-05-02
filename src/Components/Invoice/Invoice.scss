@@ -1,0 +1,32 @@
+.invoice {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+    border: red solid;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &--header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &--status {
+            display: flex;
+            flex-direction: row;
+            border: green solid;
+        }
+
+        &--updator {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+
+}
