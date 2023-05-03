@@ -34,12 +34,22 @@ function Invoice() {
             </div>
             <div className='invoice__container invoice__container--invoice-summary'>
                 <div className='invoice__container invoice__container--computation'>
-                    <p className='invoice__text invoice__text--item-name'>Item Name</p>
-                    <p className='invoice__text invoice__text--computation'>Computation</p>
+                    <div className='invoice__container--particular-name'>
+                        <p className='invoice__text invoice__text--item-name'>Item Name</p>
+                        <p className='invoice__text invoice__text--quantity'>QTY.</p>
+                        <p className='invoice__text invoice__text--price'>Price</p>
+                        <p className='invoice__text invoice__text--total'>Total</p>
+                    </div>
+                    <div className='invoice__container--particular-value'>
+                        <p className='invoice__text invoice__text--item-name-value'>Brand Guidelines</p>
+                        <p className='invoice__text invoice__text--quantity-value'>1</p>
+                        <p className='invoice__text invoice__text--price-value'>1,800.90</p>
+                        <p className='invoice__text invoice__text--total-value'>1,800.90</p>
+                    </div>
+
                 </div>
-                <p className='invoice__number invoice__number--total-price'>Total Price</p>
-                <div>
-                    <p className='invoice__text invoice__text--grand-total'>Grand Total Text</p>
+                <div className='invoice__container--grand-total'>
+                    <p className='invoice__text invoice__text--grand-total'>Amount Due</p>
                     <p className='invoice__number invoice__number--grant-total'>Grand Total Number</p>
                 </div>
             </div>

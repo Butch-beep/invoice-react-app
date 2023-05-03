@@ -19,13 +19,50 @@
         &--status {
             display: flex;
             flex-direction: row;
-            border: green solid;
         }
 
         &--updator {
             display: flex;
             flex-direction: row;
         }
+
+        &--bill-from {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &--bill-to {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+
+        &--invoice-summary {
+            border: gray solid;
+        }
+
+        &--particular{
+            &-name {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            &-value {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        
+        &--grand-total {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
     }
 
 

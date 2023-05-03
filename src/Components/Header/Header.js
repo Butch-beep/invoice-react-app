@@ -50,8 +50,7 @@ function Header( {onClick} ) {
                 </label>
           </div>
         </div>
-        <button className='
-        header__button--new-invoice'>New Invoice</button>
+        <button className='header__button--new-invoice'>New Invoice</button>
 
     </div>
   )

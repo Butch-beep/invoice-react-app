@@ -5,6 +5,7 @@ import NavBar from './components/NavBar/NavBar';
 import Header from './components/Header/Header'
 import InvoiceList from './components/InvoiceList/InvoiceList';
 import Invoice from './components/Invoice/Invoice'
+import { Routes, Route } from 'react-router-dom';
 
 
 const queryClient = new QueryClient()
@@ -25,11 +26,14 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <div className="App">
         <NavBar />
-        <main className='App__container'>
-          {/* <Header onClick={handleFilter}/>
-          <InvoiceList filter={filter}/> */}
-          <Invoice />
-        </main>
+                  <main className='App__container'>
+            <Header onClick={handleFilter}/>
+            <InvoiceList filter={filter}/>
+          </main>
+        {/* <Routes>
+          <Route path='invoice/:invoiceID' element={ <Invoice /> }></Route>
+        </Routes> */}
+
       </div>
     </QueryClientProvider>
   );
