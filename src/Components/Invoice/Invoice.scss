@@ -65,5 +65,27 @@
 
     }
 
+    &__symbol {
+        &--green {
+            color: green;
+        }
+
+        &--orange {
+            color: orange;
+        }
+
+        &--white {
+            color: white;
+        }
+    }
+
+    &__updator {
+
+        &--paid {
+            &--invisible {
+                display: none;
+            }
+        }
+    }
 
 }
