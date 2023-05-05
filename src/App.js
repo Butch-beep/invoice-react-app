@@ -26,14 +26,14 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <div className="App">
         <NavBar />
-                  <main className='App__container'>
-            <Header onClick={handleFilter}/>
-            <InvoiceList filter={filter}/>
-          </main>
-        {/* <Routes>
-          <Route path='invoice/:invoiceID' element={ <Invoice /> }></Route>
-        </Routes> */}
-
+        <Routes>
+          <Route index element={
+            <main className='App__container'>
+              <Header onClick={handleFilter}/>
+              <InvoiceList filter={filter}/>
+            </main>} />
+          <Route path='invoice/:invoiceId' element={ <Invoice /> } />
+        </Routes>
       </div>
     </QueryClientProvider>
   );

@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useQuery } from 'react-query';
+import { useNavigate } from 'react-router';
 import axios from 'axios';
 import './InvoiceList.scss'
 import arrowRight from '../../assets/icon-arrow-right.svg';
 
 function InvoiceList({ filter }) {
-
+  const navigate = useNavigate()
 
   const { isLoading, data } = useQuery('invoice', () => {
     return axios.get('http://localhost:4000/invoices')
@@ -15,8 +16,10 @@ function InvoiceList({ filter }) {
     return <h2>Loading...</h2>
   }
 
+
+
   const invoiceListHTML = (param) => 
-    <button key={param.id} className='invoice-list__container'>
+    <button key={param.id} className='invoice-list__container' onClick={() => navigate('invoice')}>
       <p>{param.id}</p>
       <p>{param.paymentDue}</p>
       <p>{param.clientName}</p>
