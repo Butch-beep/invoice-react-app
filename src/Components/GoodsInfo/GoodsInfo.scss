@@ -1,0 +1,10 @@
+.goods-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+    }
+}

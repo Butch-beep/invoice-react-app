@@ -19,7 +19,7 @@ function InvoiceList({ filter }) {
 
 
   const invoiceListHTML = (param) => 
-    <button key={param.id} className='invoice-list__container' onClick={() => navigate('invoice')}>
+    <button key={param.id} className='invoice-list__container' onClick={() => navigate(`${param.id}`)}>
       <p>{param.id}</p>
       <p>{param.paymentDue}</p>
       <p>{param.clientName}</p>

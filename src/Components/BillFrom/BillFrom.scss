@@ -1,0 +1,11 @@
+.bill-from {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+    &__container {
+        &__city-code-country {
+            display: flex;
+        }
+    }
+}

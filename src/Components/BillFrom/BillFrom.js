@@ -1,16 +1,52 @@
-import React from 'react'
+import React, { useState } from 'react'
+import './BillFrom.scss'
 
 function BillFrom() {
-  return (
-    <>
-        <p>Steet Address</p>
-        <div>
-            <p>City</p>
-            <p>Post Code</p>
-            <p>Country</p>
-        </div>  
 
-    </>
+  const [street, setStreet] = useState()
+  const [city, setCity] = useState()
+  const [postCode, setPostCode] = useState()
+  const [country, setCountry] = useState()
+
+  const handleStreet = (e) => {
+    setStreet(e.target.value)
+  }
+
+  const handleCity = (e) => {
+    setCity(e.target.value)
+  }
+
+  const handlePostCode = (e) => {
+    setPostCode(e.target.value)
+  }
+
+  const handleCountry = (e) => {
+    setCountry(e.target.value)
+  }
+
+
+  return (
+    <div className='bill-from bill-from__container container--main'>
+        <h2 className='new-invoice__text text--from-h2'>Bill From</h2>
+        <label className='bill-from__label label--street-address'>
+          Street Address
+          <input className='bill-from__input input--street-address' type='text' value={street} onChange={handleStreet} />
+        </label>
+        <div className='bill-from__container bill-from__container--city-code-country'>
+          <label className='bill-from__label label--city'>
+            City
+            <input className='bill-from__input input--city' type='text' value={city} onChange={handleCity} />
+          </label>
+          <label className='bill-from__label label--post-code'>
+            Post Code
+            <input className='bill-from__input input--country' type='text' value={postCode} onChange={handlePostCode} />
+          </label>
+          <label className='bill-from__label label--country'>
+            Country
+            <input className='bill-from__input input--country' type='text' value={country} onChange={handleCountry} />
+          </label>
+        </div>  
+    </div>
   )
 }
 

@@ -1,0 +1,20 @@
+.new-invoice {
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__container {
+        &--buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__btn {
+        &--discard {
+            margin-right: auto;
+        }
+    }
+}

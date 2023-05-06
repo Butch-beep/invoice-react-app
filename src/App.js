@@ -6,6 +6,7 @@ import Header from './components/Header/Header'
 import InvoiceList from './components/InvoiceList/InvoiceList';
 import Invoice from './components/Invoice/Invoice'
 import { Routes, Route } from 'react-router-dom';
+import CreateInvoice from './components/CreateInvoice/CreateInvoice';
 
 
 const queryClient = new QueryClient()
@@ -32,8 +33,9 @@ function App() {
               <Header onClick={handleFilter}/>
               <InvoiceList filter={filter}/>
             </main>} />
-          <Route path='invoice/:invoiceId' element={ <Invoice /> } />
+          <Route path=':invoiceId' element={ <Invoice /> } />
         </Routes>
+      <CreateInvoice />
       </div>
     </QueryClientProvider>
   );
