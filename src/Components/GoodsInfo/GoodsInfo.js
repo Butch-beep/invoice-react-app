@@ -14,7 +14,7 @@ function GoodsInfo() {
     setTerm(e.target.value)
   }
 
-  const maxDate = () => { 
+  const getToday = () => { 
     const today = new Date().toLocaleDateString('en-ph').split('/')
     return today[2] + '-0' + today[0] + '-0' + today[1]
   }
@@ -23,11 +23,15 @@ function GoodsInfo() {
     <div className='goods-info goods-info__container'>
         <label className='goods-info__label goods-info__label--invoice-date'>
             Invoice Date
-            <input className='goods-info__input input--invoice-date' type='date' max={maxDate()}/>
+            <input className='goods-info__input input--invoice-date' name="createdAt" type='date' value={getToday()} readOnly />
+        </label>
+        <label className='goods-info__label goods-info__label--payment-due'>
+            Payment Due
+            <input className='goods-info__input input--invoice-date' name="paymentDue" type='date' required/>
         </label>
         <label className='goods-info__label goods-info__label--payment-terms'>
           Payment Terms
-          <select className='goods-info__select-terms' name='selectedTerm' defaultValue={'30'}>
+          <select className='goods-info__select-terms' name='paymentTerms' defaultValue={'30'}>
             <option className='goods-info__option option--terms-one' value='1'>Net 1 Day</option>
             <option className='goods-info__option option--terms-seven' value='7'>Net 7 Day</option>
             <option className='goods-info__option option--terms-fourteen' value='14'>Net 14 Day</option>
@@ -36,7 +40,7 @@ function GoodsInfo() {
         </label>
         <label className='goods-info__label goods-info__label--project-description'>
             Project Description
-            <input className='goods-info__input input--project-description' type='text' value={description} onChange={handleDescription}/>
+            <input className='goods-info__input input--project-description' name="description" type='text' value={description} onChange={handleDescription}/>
         </label>
     </div>
   )

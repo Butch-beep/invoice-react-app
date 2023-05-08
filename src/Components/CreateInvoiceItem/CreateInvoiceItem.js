@@ -30,20 +30,20 @@ function NewInvoiceItemList() {
       <h2 className='new-invoice__text text--item-list'>Item List</h2>
       <label className='new-invoice__label label--item-name'>
         Item Name
-        <input className='new-invoice__input input--item-name' type='text' value={name} onChange={handleName} />
+        <input className='new-invoice__input input--item-name' name="items.name" type='text' value={name} onChange={handleName} required/>
       </label>
       <div className='new-invoice__container container--item-info'>
         <label className='new-invoice__label label--quantity'>
           Quantity
-          <input className='new-invoice__input input--quantity' type='text' value={quantity} onChange={handleQuantity} />
+          <input className='new-invoice__input input--quantity'  name="items.quantity" type='text' value={quantity} onChange={handleQuantity} required/>
         </label>      
         <label className='new-invoice__label label--price'>
             Price
-            <input className='new-invoice__input input--price' type='text' value={price} onChange={handlePrice} />
+            <input className='new-invoice__input input--price'  name="items.price" type='text' value={price} onChange={handlePrice} required/>
         </label> 
         <label className='new-invoice__label label--total'>
           Total
-          <input className='new-invoice__input input--total' type='text' value={total} disabled />
+          <input className='new-invoice__input input--total'  name="items.total" type='text' value={total} disabled />
         </label>
       <button className='new-invoice__btn btn--delete'>
         <img className='new-invoice__img img--delete' src={deleteLogo} />

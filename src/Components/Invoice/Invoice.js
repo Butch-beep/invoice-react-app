@@ -58,9 +58,9 @@ function Invoice() {
     <div className='invoice'>
         <div className='invoice__container invoice__container--header'>
             <div className='invoice__container invoice__container--status'>
-                <p className='invoice__text invoice__text--status'>Status</p>
+                <p className='invoice__text invoice__text--status' >Status</p>
                 <span className={`invoice__symbol--${getStatus(data?.data[index].status)}`}>Icon</span>
-                <p className='invoice__text'>{upperCaseFirstLetter(data?.data[index].status)}</p>
+                <p className='invoice__text' name="status">{upperCaseFirstLetter(data?.data[index].status)}</p>
             </div>
             <div className='invoice__container invoice__container--updator'>
                 <button className='invoice__updator invoice__updator--edit' type='button'>Edit</button>
