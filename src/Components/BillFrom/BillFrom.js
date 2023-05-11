@@ -30,16 +30,16 @@ function BillFrom() {
         <h2 className='new-invoice__text text--from-h2'>Bill From</h2>
         <label className='bill-from__label label--street-address'>
           Street Address
-          <input className='bill-from__input input--street-address' name='from.street' type='text' value={street} onChange={handleStreet} />
+          <input className='bill-from__input input--street-address' name='from.street' type='text' value={street} onChange={handleStreet} required />
         </label>
         <div className='bill-from__container bill-from__container--city-code-country'>
           <label className='bill-from__label label--city'>
             City
-            <input className='bill-from__input input--city' name='from.city' type='text' value={city} onChange={handleCity} required/>
+            <input className='bill-from__input bill-from__input--city' name='from.city' type='text' value={city} onChange={handleCity} required />
           </label>
           <label className='bill-from__label label--post-code'>
             Post Code
-            <input className='bill-from__input input--country' name='from.postCode' type='text' value={postCode} onChange={handlePostCode} />
+            <input className='bill-from__input input--country' name='from.postCode' type='text' value={postCode} onChange={handlePostCode}  required/>
           </label>
           <label className='bill-from__label label--country'>
             Country

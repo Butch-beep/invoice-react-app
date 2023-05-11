@@ -1,57 +1,81 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import deleteLogo from '../../assets/icon-delete.svg'
 import './CreateInvoiceItem.scss'
 
-function NewInvoiceItemList() {
+function NewInvoiceItemList({ onClick }) {
 
-  const [name, setName] = useState()
-  const [quantity, setQuantity] = useState()
-  const [price, setPrice] = useState()
-  const [total, setTotal] = useState()
+  const [items, setItems] = useState([{
+    name: "",
+    quantity: "",
+    price: "",
+    total: ""
+  }])
 
-  const handleName = (e) => {
-    setName(e.target.value)
+  const handleChangeName = (e, index) => {
+    const itemsCopy = [...items]
+    itemsCopy[index].name = e.target.value
+    setItems(itemsCopy)
   }
 
-  const handleQuantity = (e) => {
-    setQuantity(e.target.value)
+  const handleChangeQuantity = (e, index) => {
+    const itemsCopy = [...items]
+    itemsCopy[index].quantity = e.target.value
+    setItems(itemsCopy)
   }
 
-  const handlePrice = (e) => {
-    setPrice(e.target.value)
+  const handleChangePrice = (e, index) => {
+    const itemsCopy = [...items]
+    itemsCopy[index].price = e.target.value
+    setItems(itemsCopy)
   }
 
-  const handleTotal = (e) => {
-    setTotal(e.target.value)
+  const handleAddItem = () => {
+    const itemsCopy = [...items, [{
+      name: "",
+      quantity: "",
+      price: "",
+      total: ""
+    }]]
+    setItems(itemsCopy)
+  }
+
+  const handleDeleteItem = (index) => {
+    const itemsCopy = [...items]
+    itemsCopy.splice(index, 1)
+    setItems(itemsCopy)
   }
 
   return (
     <div className='new-invoice-item new-invoice-item__container container--main'>
       <h2 className='new-invoice__text text--item-list'>Item List</h2>
-      <label className='new-invoice__label label--item-name'>
+    {
+      items.map((item, index) => (
+      <>
+        <label className='new-invoice__label label--item-name'>
         Item Name
-        <input className='new-invoice__input input--item-name' name="items.name" type='text' value={name} onChange={handleName} required/>
+        <input className='new-invoice__input input--item-name' name="items.name" type='text' 
+        value={item.name} onChange={(e) => handleChangeName(e, index)} required />
       </label>
       <div className='new-invoice__container container--item-info'>
         <label className='new-invoice__label label--quantity'>
           Quantity
-          <input className='new-invoice__input input--quantity'  name="items.quantity" type='text' value={quantity} onChange={handleQuantity} required/>
-        </label>      
+          <input className='new-invoice__input input--quantity' name="items.quantity" type='text' value={item.quantity} onChange={(e) => handleChangeQuantity(e, index)} required />
+        </label>
         <label className='new-invoice__label label--price'>
-            Price
-            <input className='new-invoice__input input--price'  name="items.price" type='text' value={price} onChange={handlePrice} required/>
-        </label> 
+          Price
+          <input className='new-invoice__input input--price' name="items.price" type='text' value={item.price} onChange={(e) => handleChangePrice(e, index)} required />
+        </label>
         <label className='new-invoice__label label--total'>
           Total
-          <input className='new-invoice__input input--total'  name="items.total" type='text' value={total} disabled />
+          <input className='new-invoice__input input--total' name="items.total" type='text' value={item.total} disabled />
         </label>
-      <button className='new-invoice__btn btn--delete'>
-        <img className='new-invoice__img img--delete' src={deleteLogo} />
-      </button>   
+        <button className='new-invoice__btn btn--delete' onClick={() => handleDeleteItem(index)}>
+          <img className='new-invoice__img img--delete' src={deleteLogo} />
+        </button>
       </div>
-      <button className='new-invoice__btn btn--add-item'>
-        <p className='new-invoice__text text--add-item'>+ Add New Item</p>
-      </button>
+      </>))
+    }
+    <button onClick={handleAddItem}>Add Item</button>
     </div>
   )
 }

@@ -5,18 +5,8 @@ import axios from 'axios';
 import './InvoiceList.scss'
 import arrowRight from '../../assets/icon-arrow-right.svg';
 
-function InvoiceList({ filter }) {
+function InvoiceList({ filter, data }) {
   const navigate = useNavigate()
-
-  const { isLoading, data } = useQuery('invoice', () => {
-    return axios.get('http://localhost:4000/invoices')
-  }) 
-
-  if (isLoading) {
-    return <h2>Loading...</h2>
-  }
-
-
 
   const invoiceListHTML = (param) => 
     <button key={param.id} className='invoice-list__container' onClick={() => navigate(`${param.id}`)}>
@@ -31,10 +21,10 @@ function InvoiceList({ filter }) {
   return (
     <div className='invoice-list'>
       {filter.length === 0 ? 
-        data?.data.map((invoice) => {
+        data.map((invoice) => {
           return invoiceListHTML(invoice)
           }) 
-      : data?.data.map((invoice) => {
+      : data.map((invoice) => {
           return filter.includes(invoice.status) 
             ? invoiceListHTML(invoice)
             : null})

@@ -47,7 +47,7 @@ function BillTo() {
         </label>
         <label className='bill-to__label label--street-address'>
           Street Address
-          <input className='bill-to__input input--street-address' name="to.street" type='text' value={street} onChange={handleStreet} />
+          <input className='bill-to__input input--street-address' name="to.street" type='text' value={street} onChange={handleStreet} required/>
         </label>
         <div className='bill-to__container bill-to__container--city-code-country'>
           <label className='bill-to__label label--city'>
@@ -56,7 +56,7 @@ function BillTo() {
           </label>
           <label className='bill-to__label label--post-code'>
             Post Code
-            <input className='bill-to__input input--country' name="to.postCode" type='text' value={postCode} onChange={handlePostCode} />
+            <input className='bill-to__input input--country' name="to.postCode" type='text' value={postCode} onChange={handlePostCode} required/>
           </label>
           <label className='bill-to__label label--country'>
             Country

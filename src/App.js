@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { QueryClientProvider, QueryClient } from 'react-query'
+import React, { useState, useEffect } from 'react';
 import './App.scss'
 import NavBar from './components/NavBar/NavBar';
 import Header from './components/Header/Header'
@@ -8,12 +7,17 @@ import Invoice from './components/Invoice/Invoice'
 import { Routes, Route } from 'react-router-dom';
 import CreateInvoice from './components/CreateInvoice/CreateInvoice';
 
-
-const queryClient = new QueryClient()
-
 function App() {
 
   const [filter, setFilter] = useState([]);
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+
+    fetch("http://localhost:4000/invoices")
+    .then(response => response.json())
+    .then(data =>setData(data))
+  }, [])
 
   const handleFilter = (e) => {
     if (e.target.checked) {
@@ -24,20 +28,18 @@ function App() {
   }
 
   return (
-    <QueryClientProvider client={queryClient}>
       <div className="App">
         <NavBar />
         <Routes>
           <Route index element={
             <main className='App__container'>
               <Header onClick={handleFilter}/>
-              <InvoiceList filter={filter}/>
+              <InvoiceList filter={filter} data={data}/>
             </main>} />
-          <Route path=':invoiceId' element={ <Invoice /> } />
+          <Route path=':invoiceId' element={ <Invoice data={data}/> } />
         </Routes>
-      <CreateInvoice />
+      {/* <CreateInvoice /> */}
       </div>
-    </QueryClientProvider>
   );
 }
 

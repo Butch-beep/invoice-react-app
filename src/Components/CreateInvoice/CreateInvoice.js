@@ -4,12 +4,14 @@ import BillFrom from '../BillFrom/BillFrom'
 import BillTo from '../BillTo/BillTo'
 import GoodsInfo from '../GoodsInfo/GoodsInfo'
 import CreateInvoiceNewitem from '../CreateInvoiceItem/CreateInvoiceItem'
+import ItemList from '../ItemList/ItemList'
 import './CreateInvoice.scss'
 import axios from 'axios'
 
 function CreateInvoice() {
 
   const [inputValue, setInputValue] = useState("")
+  const [itemCount, setItemCount] = useState(0)
 
   const handleChange = (e) => {
     setInputValue(e.target.value)
@@ -139,6 +141,11 @@ function CreateInvoice() {
   })
 }
 
+  const handleAddItem = () => {
+    setItemCount(itemCount + 1)
+  }
+
+
   return (
     <div className='new-invoice new-invoice__container container--main'>
       <form method='post' onSubmit={handleSubmit}>
@@ -148,17 +155,12 @@ function CreateInvoice() {
           <BillTo />
           <GoodsInfo />
           <CreateInvoiceNewitem />
-          <p>NewInvoiceError</p>
           <div className='new-invoice__container new-invoice__container--buttons'>
             <button className='new-invoice__btn new-invoice__btn--discard'>Discard</button> 
             <button className='new-invoice__btn btn--draft'>Save as Draft</button> 
             <button className='new-invoice__btn btn--save-send' type='submit'>Save & Send</button>
           </div>
       </form>
-      {/* <form method='post' onSubmit={handleSubmit}>
-        <input name='text' type='text' value={inputValue} onChange={handleChange}></input>
-        <button type='submit'>Send</button>
-      </form> */}
     </div>
   )
 }

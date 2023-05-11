@@ -15,9 +15,22 @@ function GoodsInfo() {
   }
 
   const getToday = () => { 
-    const today = new Date().toLocaleDateString('en-ph').split('/')
-    return today[2] + '-0' + today[0] + '-0' + today[1]
+    const today = new Date()
+    let mm = today.getMonth() + 1
+    let dd = today.getDate() 
+    const yyyy = today.getFullYear()
+
+    if (mm < 10) {
+      mm = '0' + mm 
+    }
+
+    if (dd < 10) {
+      dd = '0' + dd
+    }
+
+    return `${yyyy}-${mm}-${dd}`
   }
+
 
   return (
     <div className='goods-info goods-info__container'>
@@ -40,7 +53,7 @@ function GoodsInfo() {
         </label>
         <label className='goods-info__label goods-info__label--project-description'>
             Project Description
-            <input className='goods-info__input input--project-description' name="description" type='text' value={description} onChange={handleDescription}/>
+            <input className='goods-info__input input--project-description' name="description" type='text' value={description} onChange={handleDescription} required/>
         </label>
     </div>
   )
