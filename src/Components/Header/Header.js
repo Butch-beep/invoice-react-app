@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router';
 import arrowDown from '../../assets/icon-arrow-down.svg'
 import arrowUp from '../../assets/icon-arrow-down.svg'
 import './Header.scss'
 
 function Header( {onClick} ) {
 
+  const navigate = useNavigate()
   const [dropDown, setDropDown] = useState(false);
 
   const handleDropDown = () => {
@@ -50,7 +52,7 @@ function Header( {onClick} ) {
                 </label>
           </div>
         </div>
-        <button className='header__button--new-invoice'>New Invoice</button>
+        <button className='header__button--new-invoice' onClick={() => navigate('new-invoice')} >New Invoice</button>
 
     </div>
   )

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router';
 import './App.scss'
 import NavBar from './components/NavBar/NavBar';
 import Header from './components/Header/Header'
@@ -16,7 +17,7 @@ function App() {
 
     fetch("http://localhost:4000/invoices")
     .then(response => response.json())
-    .then(data =>setData(data))
+    .then(data => setData(data))
   }, [])
 
   const handleFilter = (e) => {
@@ -37,8 +38,8 @@ function App() {
               <InvoiceList filter={filter} data={data}/>
             </main>} />
           <Route path=':invoiceId' element={ <Invoice data={data}/> } />
+          <Route path='new-invoice' element={ <CreateInvoice data={data} />} />
         </Routes>
-      {/* <CreateInvoice /> */}
       </div>
   );
 }

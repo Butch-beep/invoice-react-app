@@ -1,7 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import { useQuery } from 'react-query';
 import { useNavigate } from 'react-router';
-import axios from 'axios';
 import './InvoiceList.scss'
 import arrowRight from '../../assets/icon-arrow-right.svg';
 

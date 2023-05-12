@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useQuery } from 'react-query'
+import { useNavigate } from 'react-router';
 import BillFrom from '../BillFrom/BillFrom'
 import BillTo from '../BillTo/BillTo'
 import GoodsInfo from '../GoodsInfo/GoodsInfo'
@@ -8,18 +8,15 @@ import ItemList from '../ItemList/ItemList'
 import './CreateInvoice.scss'
 import axios from 'axios'
 
-function CreateInvoice() {
+function CreateInvoice({ data }) {
 
+  const navigate = useNavigate()
   const [inputValue, setInputValue] = useState("")
   const [itemCount, setItemCount] = useState(0)
 
   const handleChange = (e) => {
     setInputValue(e.target.value)
   }
-
-  const { data } = useQuery('invoice', () => {
-    return axios.get('http://localhost:4000/invoices')
-  }) 
 
 
   const getFromAddressKeys = (obj) => {
@@ -95,7 +92,7 @@ function CreateInvoice() {
   }
 
   const checkIdDuplicate = (param) => {
-    const arr = data.data.map(item => item["id"])
+    const arr = data.map(item => item["id"])
     return arr.includes(param)
   }
 
@@ -149,7 +146,7 @@ function CreateInvoice() {
   return (
     <div className='new-invoice new-invoice__container container--main'>
       <form method='post' onSubmit={handleSubmit}>
-        <button className='new-invoice__button button--go-back'>Go back</button>
+        <button className='new-invoice__button button--go-back' onClick={() => navigate('/')} >Go back</button>
           <h1 className='new-invoice__text text--h1'>New Invoice</h1>
           <BillFrom />
           <BillTo />
